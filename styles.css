@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(233, 47%, 7%);
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    height: 100vh;
+}
+
+.card {
+    background-color: hsl(244, 38%, 16%);
+    width: 325px;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.img-filter {
+    width: 325px;
+    height: 235px;
+    position: relative;
+    background: linear-gradient(rgba(94, 12, 145, 0.6), rgba(94, 12, 145, 0.6)), url(images/image-header-mobile.jpg);
+    background-size: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+h1 {
+    color: hsl(0, 0%, 100%);
+    font-size: 1.75rem;
+    margin: 1.5rem 1.5rem 0;
+    padding: 0.5rem;
+}
+
+.description {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin: 0 1.5rem;
+    line-height: 1.75;
+    padding: 0.5rem;
+}
+
+.statistics {
+    margin: 1.75rem;
+}
+
+.stats {
+    margin: 2rem 1.4rem;
+    list-style-type: none;
+}
+
+.statHeading {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.stats-word{
+    color: hsla(0, 0%, 100%, 0.6);
+    font-family: 'Lexend Deca', sans-serif;
+    margin: 0.5rem;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.purple {
+    color: hsl(277, 64%, 61%);
+}
+
+
+/* LARGE SCREEN */
+@media screen and (min-width: 1200px) {
+    
+    .card {
+        display: grid;
+        width: 80%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "words image";
+    }
+
+    .desktop-img {
+        background-image: url(images/image-header-desktop.jpg);
+        grid-column: span 1;
+        width: 100%;
+        grid-area: image;
+    }
+
+    .img-filter {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 10px 10px 0;
+    }
+
+    .words {
+        grid-column: span 1;
+        grid-area: words;
+        text-align: left;
+        padding: 4.5rem;
+        padding-bottom: 3rem;
+    }
+
+    h1 {
+        margin: 0;
+        margin-bottom: 1rem;
+        font-size: 2.25rem;
+    }
+
+    .description {
+        margin: 0;
+        margin-right: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .statistics {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        margin-left: -1rem;
+    }
+
+    .stats {
+        margin-right: 1.5rem;
+    }
+
+    .stats-word {
+        margin: 0;
+        margin-top: 0.5rem;
+    }
+}
+
+
+
+
